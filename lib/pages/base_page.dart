@@ -24,11 +24,6 @@ class BasePage extends StatelessWidget {
     return Consumer<MainScreenProvider>(
       builder: (BuildContext context, MainScreenProvider value, Widget? child) => Scaffold(
         body: pageList[value.pageIndex],
-        appBar: AppBar(
-          title:
-              Text("Shoeper", style: appStyle(Colors.black, 30, FontWeight.bold)),
-          centerTitle: true,
-        ),
         bottomNavigationBar: SafeArea(
           child: Padding(
             padding: const EdgeInsets.all(10),
