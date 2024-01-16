@@ -24,45 +24,48 @@ class BasePage extends StatelessWidget {
     return Consumer<MainScreenProvider>(
       builder: (BuildContext context, MainScreenProvider value, Widget? child) => Scaffold(
         body: pageList[value.pageIndex],
-        bottomNavigationBar: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.all(10),
-            child: Container(
-              padding: const EdgeInsets.all(12),
-              margin: const EdgeInsets.symmetric(horizontal: 15),
-              decoration: const BoxDecoration(
-                color: Colors.black,
-                borderRadius: BorderRadius.all(Radius.circular(30)),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  NavBarIcon(
-                    icon: Icons.home,
-                    hasFocus: value.pageIndex==0,
-                    onTap: () { value.pageIndex = 0;},
-                  ),
-                  NavBarIcon(
-                    icon: Icons.search,
-                    hasFocus: value.pageIndex==1,
-                    onTap: () { value.pageIndex = 1;},
-                  ),
-                  NavBarIcon(
-                    icon: Icons.add,
-                    hasFocus: value.pageIndex==2,
-                    onTap: () { value.pageIndex = 2;},
-                  ),
-                  NavBarIcon(
-                    icon: Icons.shopping_cart,
-                    hasFocus: value.pageIndex==3,
-                    onTap: () { value.pageIndex = 3;},
-                  ),
-                  NavBarIcon(
-                    icon: Icons.person,
-                    hasFocus: value.pageIndex==4,
-                    onTap: () { value.pageIndex = 4;},
-                  ),
-                ],
+        bottomNavigationBar: Container(
+          color: Color.fromARGB(255, 240, 240, 240),
+          child: SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.all(10),
+              child: Container(
+                padding: const EdgeInsets.all(12),
+                margin: const EdgeInsets.symmetric(horizontal: 15),
+                decoration: const BoxDecoration(
+                  color: Colors.black,
+                  borderRadius: BorderRadius.all(Radius.circular(30)),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    NavBarIcon(
+                      icon: Icons.home,
+                      hasFocus: value.pageIndex==0,
+                      onTap: () { value.pageIndex = 0;},
+                    ),
+                    NavBarIcon(
+                      icon: Icons.search,
+                      hasFocus: value.pageIndex==1,
+                      onTap: () { value.pageIndex = 1;},
+                    ),
+                    NavBarIcon(
+                      icon: Icons.add,
+                      hasFocus: value.pageIndex==2,
+                      onTap: () { value.pageIndex = 2;},
+                    ),
+                    NavBarIcon(
+                      icon: Icons.shopping_cart,
+                      hasFocus: value.pageIndex==3,
+                      onTap: () { value.pageIndex = 3;},
+                    ),
+                    NavBarIcon(
+                      icon: Icons.person,
+                      hasFocus: value.pageIndex==4,
+                      onTap: () { value.pageIndex = 4;},
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
