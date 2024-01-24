@@ -4,6 +4,7 @@ import 'package:shoeper/components/navbar_icons.dart';
 import 'package:shoeper/consts/appstyle.dart';
 import 'package:shoeper/controller/main_screen_provider.dart';
 import 'package:shoeper/pages/add_page.dart';
+import 'package:shoeper/pages/all_products.dart';
 import 'package:shoeper/pages/cart_page.dart';
 import 'package:shoeper/pages/home_page.dart';
 import 'package:shoeper/pages/profile_page.dart';
@@ -13,7 +14,8 @@ import 'package:shoeper/pages/search_page.dart';
 class BasePage extends StatelessWidget {
   BasePage({super.key});
   List<Widget> pageList = const [
-    MyHomePage(),
+    // MyHomePage(),
+    AllProducts(),
     SearchPage(),
     AddPage(),
     CartPage(),
