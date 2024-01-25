@@ -14,8 +14,7 @@ import 'package:shoeper/pages/search_page.dart';
 class BasePage extends StatelessWidget {
   BasePage({super.key});
   List<Widget> pageList = const [
-    // MyHomePage(),
-    AllProducts(),
+    MyHomePage(),
     SearchPage(),
     AddPage(),
     CartPage(),

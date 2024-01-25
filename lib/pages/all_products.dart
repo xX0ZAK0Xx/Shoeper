@@ -7,7 +7,8 @@ import 'package:shoeper/models/sneakers_model.dart';
 import 'package:shoeper/services/helper.dart';
 
 class AllProducts extends StatefulWidget {
-  const AllProducts({super.key});
+  const AllProducts({super.key, required this.tabIndex});
+  final int tabIndex;
 
   @override
   State<AllProducts> createState() => _AllProductsState();
@@ -16,7 +17,7 @@ class AllProducts extends StatefulWidget {
 class _AllProductsState extends State<AllProducts>
     with TickerProviderStateMixin {
   late final TabController _tabController =
-      TabController(length: 3, vsync: this);
+      TabController(length: 3, vsync: this, initialIndex: widget.tabIndex);
 
   Future<List<Sneaker>> _maleShoeList = Helper().getMaleSneakers();
   Future<List<Sneaker>> _femaleShoeList = Helper().getFemaleSneakers();
@@ -96,7 +97,8 @@ class _AllProductsState extends State<AllProducts>
               padding: EdgeInsets.only(top: screenHeight * 0.2),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(30),
-                child: TabBarView(controller: _tabController, children: [
+                child: TabBarView(
+                  controller: _tabController, children: [
                   LatestShoes(shoeList: _maleShoeList),
                   LatestShoes(shoeList: _femaleShoeList),
                   LatestShoes(shoeList: _kidsShoeList),

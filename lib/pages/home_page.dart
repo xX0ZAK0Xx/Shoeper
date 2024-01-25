@@ -94,9 +94,9 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                   child: TabBarView(
                     controller: _tabController,
                     children: [
-                      HomeShoeCard(screenHeight: screenHeight, gender: _male, screenWidth: screenWidth),
-                      HomeShoeCard(screenHeight: screenHeight, gender: _female, screenWidth: screenWidth),
-                      HomeShoeCard(screenHeight: screenHeight, gender: _kids, screenWidth: screenWidth),
+                      HomeShoeCard(screenHeight: screenHeight, gender: _male, screenWidth: screenWidth, tabIndex: 0,),
+                      HomeShoeCard(screenHeight: screenHeight, gender: _female, screenWidth: screenWidth, tabIndex: 1,),
+                      HomeShoeCard(screenHeight: screenHeight, gender: _kids, screenWidth: screenWidth, tabIndex: 2,),
                       
                     ],
                   ),
