@@ -3,6 +3,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:hive/hive.dart';
+import 'package:shoeper/components/checkout_btn.dart';
 import 'package:shoeper/consts/appstyle.dart';
 
 class CartPage extends StatelessWidget {
@@ -58,8 +59,7 @@ class CartPage extends StatelessWidget {
                 SizedBox(
                   height: 30,
                 ),
-                SizedBox(
-                  height: screenHeight * 0.65,
+                Expanded(
                   child: ListView.builder(
                     scrollDirection: Axis.vertical,
                     itemCount: cart.length,
@@ -73,7 +73,6 @@ class CartPage extends StatelessWidget {
                         child: Slidable(
                           key: const ValueKey(0),
                           child: Container(
-                            height: screenHeight * 0.11,
                             width: screenWidth,
                             decoration: BoxDecoration(
                               color: Colors.white,
@@ -92,16 +91,16 @@ class CartPage extends StatelessWidget {
                                 Row(
                                   children: [
                                     Padding(
-                                      padding: EdgeInsets.all(12),
+                                      padding: EdgeInsets.only(left: 12),
                                       child: CachedNetworkImage(
                                         imageUrl: data['imageUrl'][0],
-                                        height: 70,
-                                        width: 70,
+                                        height: 60,
+                                        width: 60,
                                       ),
                                     ),
                                     Padding(
                                       padding:
-                                          EdgeInsets.only(top: 12, left: 20),
+                                          EdgeInsets.only(top: 8, left: 8, bottom: 8),
                                       child: Column(
                                         mainAxisAlignment:
                                             MainAxisAlignment.start,
@@ -133,7 +132,38 @@ class CartPage extends StatelessWidget {
                                       ),
                                     )
                                   ],
-                                )
+                                ),
+                                Row(
+                                  children:[
+                                    Padding(
+                                      padding:EdgeInsets.all(12),
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius: BorderRadius.circular(16),
+                                        ),
+                                        child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          children:[
+                                            InkWell(
+                                              onTap: (){},
+                                              child: Container(
+                                                color: Colors.grey.shade400,
+                                                child: Icon(Icons.remove, size:20, color: Colors.black)),
+                                            ),
+                                            Text(data['qty'].toString(), style: appStyle(Colors.black, 16, FontWeight.normal),),
+                                            InkWell(
+                                              onTap: (){},
+                                              child: Container(
+                                                color: Colors.black,
+                                                child: Icon(Icons.add, size:20, color: Colors.white)),
+                                            ),
+                                          ]
+                                        ),
+                                      ),
+                                    )
+                                  ]
+                                ),
                               ],
                             ),
                           ),
@@ -154,6 +184,9 @@ class CartPage extends StatelessWidget {
                   }),
                 ),
               ],
+            ),
+            Align(alignment: Alignment.bottomCenter,
+              child: CheckOutButton(label: "Check Out Now", onTap: (){}),
             )
           ],
         ),
