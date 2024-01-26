@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:provider/provider.dart';
 import 'package:shoeper/components/new_shoes.dart';
 import 'package:shoeper/components/product_card.dart';
 import 'package:shoeper/consts/appstyle.dart';
+import 'package:shoeper/controller/product_provider.dart';
 import 'package:shoeper/models/sneakers_model.dart';
 import 'package:shoeper/pages/all_products.dart';
+import 'package:shoeper/pages/product_page.dart';
 
 class HomeShoeCard extends StatelessWidget {
-  const HomeShoeCard({
+  HomeShoeCard({
     super.key,
     required this.screenHeight,
     required Future<List<Sneaker>> gender,
-    required this.screenWidth, required this.tabIndex,
+    required this.screenWidth,
+    required this.tabIndex,
   }) : _shoeList = gender;
 
   final double screenHeight;
@@ -22,6 +25,8 @@ class HomeShoeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var productNotifier = Provider.of<ProductProvider>(context);
+
     return Column(
       children: [
         SizedBox(
@@ -44,12 +49,22 @@ class HomeShoeCard extends StatelessWidget {
                       scrollDirection: Axis.horizontal,
                       itemBuilder: ((context, index) {
                         final shoe = snapshot.data![index];
-                        return ProductCard(
-                            price: shoe.price,
-                            category: shoe.category,
-                            id: shoe.id,
-                            name: shoe.name,
-                            image: shoe.imageUrl[0]);
+                        return GestureDetector(
+                          onTap: () {
+                            productNotifier.shoesSizes = shoe.sizes;
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ProductPage(
+                                        id: shoe.id, category: shoe.category)));
+                          },
+                          child: ProductCard(
+                              price: shoe.price,
+                              category: shoe.category,
+                              id: shoe.id,
+                              name: shoe.name,
+                              image: shoe.imageUrl[0]),
+                        );
                       }),
                     );
                   }
@@ -70,7 +85,9 @@ class HomeShoeCard extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => AllProducts(tabIndex: tabIndex,)));
+                              builder: (context) => AllProducts(
+                                    tabIndex: tabIndex,
+                                  )));
                     },
                     child: Row(
                       children: [
