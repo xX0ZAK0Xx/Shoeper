@@ -13,7 +13,7 @@ import 'package:shoeper/pages/search_page.dart';
 // ignore: must_be_immutable
 class BasePage extends StatelessWidget {
   BasePage({super.key});
-  List<Widget> pageList = const [
+  List<Widget> pageList = [
     MyHomePage(),
     SearchPage(),
     AddPage(),

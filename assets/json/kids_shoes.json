@@ -11,7 +11,7 @@
     ],
     "oldPrice": "1899.00",
     "sizes": [
-      { "size": "3.0", "isSelected": false },
+      { "size": "3.0", "isSelected": true },
       { "size": "3.5", "isSelected": false },
       { "size": "4.0", "isSelected": false },
       { "size": "4.5", "isSelected": false },
@@ -35,7 +35,7 @@
       "https://d326fntlu7tb1e.cloudfront.net/uploads/e07593d1-436f-430d-aeea-ecc01e6f07a0-CP9797_a1.webp"
     ],
     "sizes": [
-      { "size": "3.0", "isSelected": false },
+      { "size": "3.0", "isSelected": true },
       { "size": "3.5", "isSelected": false },
       { "size": "4.0", "isSelected": false },
       { "size": "4.5", "isSelected": false },
@@ -57,7 +57,7 @@
       "https://d326fntlu7tb1e.cloudfront.net/uploads/b6a7c1c5-cdd8-46da-a4ea-5756d3a78c81-GX5724_a3.webp"
     ],
     "sizes": [
-      { "size": "3.0", "isSelected": false },
+      { "size": "3.0", "isSelected": true },
       { "size": "3.5", "isSelected": false },
       { "size": "4.0", "isSelected": false },
       { "size": "4.5", "isSelected": false },
@@ -82,7 +82,7 @@
     "oldPrice": "999.00",
     "price": "64.00",
     "sizes": [
-      { "size": "3.0", "isSelected": false },
+      { "size": "3.0", "isSelected": true },
       { "size": "3.5", "isSelected": false },
       { "size": "4.0", "isSelected": false },
       { "size": "4.5", "isSelected": false },
@@ -104,7 +104,7 @@
     ],
     "oldPrice": "849.00",
     "sizes": [
-      { "size": "3.0", "isSelected": false },
+      { "size": "3.0", "isSelected": true },
       { "size": "3.5", "isSelected": false },
       { "size": "4.0", "isSelected": false },
       { "size": "4.5", "isSelected": false },
@@ -127,7 +127,7 @@
     "oldPrice": "599.00",
     "price": "59.00",
     "sizes": [
-      { "size": "3.0", "isSelected": false },
+      { "size": "3.0", "isSelected": true },
       { "size": "3.5", "isSelected": false },
       { "size": "4.0", "isSelected": false },
       { "size": "4.5", "isSelected": false },
@@ -150,7 +150,7 @@
     "oldPrice": "2799.00",
     "price": "98.00",
     "sizes": [
-      { "size": "3.0", "isSelected": false },
+      { "size": "3.0", "isSelected": true },
       { "size": "3.5", "isSelected": false },
       { "size": "4.0", "isSelected": false },
       { "size": "4.5", "isSelected": false },
@@ -171,7 +171,7 @@
     ],
     "oldPrice": "1049.00",
     "sizes": [
-      { "size": "3.0", "isSelected": false },
+      { "size": "3.0", "isSelected": true },
       { "size": "3.5", "isSelected": false },
       { "size": "4.0", "isSelected": false },
       { "size": "4.5", "isSelected": false },
@@ -195,7 +195,7 @@
     "oldPrice": "899",
     "price": "99.00",
     "sizes": [
-      { "size": "3.0", "isSelected": false },
+      { "size": "3.0", "isSelected": true },
       { "size": "3.5", "isSelected": false },
       { "size": "4.0", "isSelected": false },
       { "size": "4.5", "isSelected": false },
@@ -216,7 +216,7 @@
       "https://d326fntlu7tb1e.cloudfront.net/uploads/68e2e5eb-c2ea-4847-9c8b-c050994bb405-FV3147_a1.webp"
     ],
     "sizes": [
-      { "size": "3.0", "isSelected": false },
+      { "size": "3.0", "isSelected": true },
       { "size": "3.5", "isSelected": false },
       { "size": "4.0", "isSelected": false },
       { "size": "4.5", "isSelected": false },
